@@ -1,23 +1,54 @@
 import React, { Component } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
+import sand from '../assets/ressources/sandkachel2.png';
 
 const Styles = styled.div`
   .navbar {
     background-color: #333;
+    background-image: url(${sand});
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    border-top: 0.3rem solid MediumSeaGreen;
+    border-bottom: 0.1rem solid #f5dcb0;
+    padding: 0.1rem 1rem
   }
-
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+    text-decoration:none;
+    text-transform:uppercase;
+    text-shadow: 1px 1px Sienna;
+    color: white;
+    transition:all .25s ease;
 
     &:hover {
-      color:white;
+      color:DarkSlateGrey;
     }
   }
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  .navbar-brand .col {
+    padding-left: 0;
+    padding-right: 0;
   }
+  .navbar-toggler {
+    background-color: Sienna;
+    opacity: 0.8;
+  }
+  .logotext
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 15px;
+
+    color:white;
+    text-decoration:none;
+    text-transform:none;
     
+    font-size: 1.8rem;
+    font-weight:bold;
+    font-style:italic;
+    text-shadow: 0.05rem 0.05rem #333;
+    font-family:'PT Sans', sans-serif;
+  }
 `;
 
 export class NavigationBar extends Component {
@@ -25,7 +56,14 @@ export class NavigationBar extends Component {
     return (
       <Styles>
         <Navbar expand="lg">
-          <Navbar.Brand href="/">TC Olching</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <Container fluid>
+              <Row>
+                <Col><img src={require("../assets/ressources/tcoplain.png")} height="45" className="d-inline-block align-top" alt="TC Olching Logo" /></Col>
+                <Col><span className="logotext d-none d-sm-block">TC Olching e. V.</span></Col>
+              </Row>
+            </Container>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
@@ -43,6 +81,9 @@ export class NavigationBar extends Component {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="training">Training</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="platzbuchung">Platzbuchung</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="login">Login</Nav.Link>
