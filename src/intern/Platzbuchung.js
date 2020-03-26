@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Platzbuchung extends Component {
+export class InternPlatzbuchung extends Component {
   render() {
     return (
       <div>

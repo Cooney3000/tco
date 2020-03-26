@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
-import styled from 'styled-components';
-import clubheim from '../assets/Clubheim.jpg';
+import React, { Component } from 'react'
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap'
+import styled from 'styled-components'
+import clubheim from '../assets/Clubheim.jpg'
 
 
 // .jumbotron {

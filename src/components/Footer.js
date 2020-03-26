@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import styled from 'styled-components';
-import sand from '../assets/ressources/sandkachel2.png';
+import React, { Component } from 'react'
+import Container from 'react-bootstrap/Container'
+import styled from 'styled-components'
+import sand from '../assets/ressources/sandkachel2.png'
 import Card from 'react-bootstrap/Card'
 import Carddeck from 'react-bootstrap/Carddeck'
 

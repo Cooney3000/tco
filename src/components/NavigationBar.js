@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Nav, Navbar, Container, Row, Col } from 'react-bootstrap';
-import styled from 'styled-components';
-import sand from '../assets/ressources/sandkachel2.png';
+import React, { Component } from 'react'
+import { Nav, Navbar, Container, Row, Col } from 'react-bootstrap'
+import styled from 'styled-components'
+import sand from '../assets/ressources/sandkachel2.png'
 
 const Styles = styled.div`
   .navbar {
@@ -71,22 +71,22 @@ export class NavigationBar extends Component {
                 <Nav.Link href="/">Aktuelles</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="verein">Verein</Nav.Link>
+                <Nav.Link href="/verein">Verein</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="mannschaften">Mannschaften</Nav.Link>
+                <Nav.Link href="/mannschaften">Mannschaften</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="jugend">Jugend</Nav.Link>
+                <Nav.Link href="/jugend">Jugend</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="training">Training</Nav.Link>
+                <Nav.Link href="/training">Training</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="platzbuchung">Platzbuchung</Nav.Link>
+                <Nav.Link className="text-warning" href="/intern/platzbuchung">Platzbuchung</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="login">Login</Nav.Link>
+                <Nav.Link className="text-warning" href="/intern/home">Intern</Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
